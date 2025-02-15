@@ -1,0 +1,186 @@
+
+:root {
+    font-size: calc(0.5vw + 1vh);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 420px;
+    color: #333; 
+    height: 100vh;
+    animation: zoom-in 1s normal forwards ease-in-out;
+    font-family: "Roboto", sans-serif; 
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(15deg, #554f4f 50%, #bebbbc 50.1%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes zoom-in {
+    0% { transform: scale(0.1); }
+    100% { transform: scale(1); }
+}
+
+h1 {
+    font-family: "Pacifico", cursive; 
+    font-size: 5.4rem;
+    margin: 4rem 0 0 0;
+    text-align: center;
+    color: #fff; 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
+}
+
+h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+}
+
+.main-container {
+    display: flex;
+    margin: 1.6rem auto;
+    width: 80%;
+    color: #bfc9d4;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+    background: rgba(240, 240, 240, 0.9); 
+    border-radius: 10px;
+    border: 1px solid #1b2e4b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.column-header {
+    font-size: 17px;
+    border-bottom: #000013 0.2rem solid;
+    text-align: center;
+    background: #fff; 
+    padding: 10px 0;
+    border-radius: 10px 10px 0 0; 
+    color: #000; 
+}
+
+.task-list {
+    min-height: 3rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.task {
+    background: #1b2e4b;
+    margin: 0.4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.task:hover {
+    background: #2b3e5a;
+}
+
+.button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.add-button {
+    background-color: #b06ee7;
+}
+
+.add-button:hover {
+    box-shadow: 0 0 20px rgba(246, 246, 244, 0.8);
+    transform: scale(1.05);
+}
+
+.delete-button {
+    background-color: #ff4444;
+}
+
+.delete-button:hover {
+    box-shadow: 0 0 20px rgba(255, 68, 68, 0.8);
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.button {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.add-button:active, .delete-button:active {
+    box-shadow: 0 0 30px rgb(185, 180, 166) 0 20px rgb(214, 209, 209);
+}
+
+.input-class {
+    outline: none;
+    height: 30px;
+    width: 180px;
+    border-radius: 10px;
+    transition: width 0.4s ease-in-out;
+}
+
+.input-class:hover {
+    width: 200px;
+    transition: width 0.6s ease-in-out;
+}
+
+.b {
+    border: 2px solid black;
+}
+
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkle-animation 0.5s forwards;
+}
+
+@keyframes sparkle-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}

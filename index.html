@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily ToDo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Daily ToDo</h1>
+    </header>
+
+    <div class="main-container" id="taskContainer">
+        <div class="column to-do-column">
+            <div class="column-header">
+                <h4>🌟 To Do</h4>
+            </div>
+            <ul class="task-list" id="to-do">
+                <li class="task d-flex justify-content-center align-items-center">
+                    <input type="text" id="newTaskToDo" placeholder="Type your task..." maxlength="12" class="input-class" onkeydown="if(event.key === 'Enter') addTask('to-do', 'newTaskToDo')">
+                    <button class="button add-button ms-3" onclick="addTask('to-do', 'newTaskToDo')">Add</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="column doing-column">
+            <div class="column-header">
+                <h4>💫 Doing</h4>
+            </div>
+            <ul class="task-list" id="doing">
+                <li class="task d-flex justify-content-center align-items-center">
+                    <input type="text" id="newTaskDoing" placeholder="Type your task..." maxlength="12" class="input-class" onkeydown="if(event.key === 'Enter') addTask('doing', 'newTaskDoing')">
+                    <button class="button add-button ms-3" onclick="addTask('doing', 'newTaskDoing')">Add</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="column done-column">
+            <div class="column-header">
+                <h4>🏆 Done</h4>
+            </div>
+            <ul class="task-list" id="done">
+                <li class="task d-flex justify-content-center align-items-center">
+                    <input type="text" id="newTaskDone" placeholder="Type your task..." maxlength="12" class="input-class" onkeydown="if(event.key === 'Enter') addTask('done', 'newTaskDone')">
+                    <button class="button add-button ms-3" onclick="addTask('done', 'newTaskDone')">Add</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
